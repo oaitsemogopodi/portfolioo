@@ -1,0 +1,26 @@
+/* Small content-fitting adjustments; original template rules remain intact. */
+.header .logo .sitename {font-size:30px;font-family:var(--heading-font);font-weight:700;color:var(--heading-color)}
+.mobile-nav-toggle {border:0;background:transparent;padding:6px}
+.hero .hero-name {font-size:clamp(36px,4.5vw,64px);font-weight:700;max-width:650px;margin:0}
+.hero {overflow:hidden;background:#0b0b0b url('../img/hero-bg.jpg') center/cover no-repeat}
+/* Keep the demo's staircase texture; conceal its stock portrait behind ours. */
+.hero::after {content:'';position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,transparent 40%,#0b0b0b 65%)}
+.hero>img {left:auto;right:0;top:-3%;bottom:auto;width:54%;height:125%;object-position:50% 20%;filter:brightness(.9) contrast(1.22);mask-image:linear-gradient(90deg,transparent,#000 18%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 18%)}
+.hero::before {content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,#0003 30%,#0b0b0b66 48%,transparent 72%)}
+.hero .container {z-index:3}
+.hero .hero-description {font-size:18px;line-height:1.7;margin-top:20px}
+.hero p {max-width:650px}.hero .typed {overflow-wrap:anywhere}
+.about .content li {flex-wrap:wrap;overflow-wrap:anywhere}
+.about img.img-fluid {filter:brightness(.9) contrast(1.22);mask-image:radial-gradient(ellipse 72% 78% at 50% 55%,#000 55%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 72% 78% at 50% 55%,#000 55%,transparent 100%)}
+.contact .info-item {overflow-wrap:anywhere;min-width:0}.contact .info-item>div {min-width:0}
+.project-summary {background:var(--surface-color);padding:28px;min-height:290px;display:flex;flex-direction:column;justify-content:center}
+.project-summary h3 {font-size:24px}.project-summary>p:first-child {color:var(--accent-color);font-size:14px}
+.portfolio .text-project .portfolio-info {opacity:1;inset:auto 0 0;padding:12px;background:#000c}
+.portfolio .text-project .portfolio-info h4,.portfolio .text-project .portfolio-info p {display:none}
+.portfolio .portfolio-content.text-project .portfolio-info .details-link {position:static;display:block;text-align:right;font-size:26px;line-height:1.2}
+.portfolio-content:focus-within .portfolio-info {opacity:1}
+.project-case,[id^='service-'] {scroll-margin-top:110px}
+:focus-visible {outline:2px solid var(--accent-color);outline-offset:5px}
+.portfolio-filters li {cursor:pointer}
+@media(max-width:1199px){.header .logo .sitename{font-size:25px}}
+@media(max-width:767px){.hero>img{top:0;width:100%;height:73%;object-position:50% 16%;mask-image:linear-gradient(#000 75%,transparent);-webkit-mask-image:linear-gradient(#000 75%,transparent)}.hero::before{background:linear-gradient(0deg,#0b0b0b 19%,#0b0b0bb3 38%,transparent 65%)}.hero{align-items:flex-end;padding-bottom:50px;min-height:820px;min-height:max(820px,100svh)}.hero .hero-name{font-size:36px}.hero p{font-size:22px}.hero .hero-description{font-size:17px}.hero .social-links{margin-top:18px}}
